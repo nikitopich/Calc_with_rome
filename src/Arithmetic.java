@@ -12,17 +12,21 @@ public class Arithmetic {
         RomeNum num1;
         RomeNum num2;
 
+        boolean RomanMode = false;      //флаг "типа обрабатываемых чсел"
+
         if (checkForInt(arrExpression[0]) && checkForInt(arrExpression[1])) {
             num1 = new RomeNum(Integer.parseInt(arrExpression[0]));
             num2 = new RomeNum(Integer.parseInt(arrExpression[1]));
+
         } else {
             num1 = new RomeNum(arrExpression[0]);
             num2 = new RomeNum(arrExpression[1]);
+            RomanMode = true;
         }
 
         resolve = operation(num1.toInt(), action, num2.toInt());
 
-        if (num1.isRoman) System.out.println(new RomeNum(resolve).toString());                             //к римскому числу
+        if (RomanMode) System.out.println(new RomeNum(resolve).toString());
         else System.out.println(resolve);
 
     }
