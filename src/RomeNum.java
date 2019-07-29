@@ -2,7 +2,7 @@ public class RomeNum {
 
     private final int decimal;      //Хранит преобразованное значение
 
-    private static int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    private static int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}; 
 
     private static String[] letters = {"M", "CM", "D", "CD" , "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
@@ -53,7 +53,7 @@ public class RomeNum {
 
         this.decimal = decimal;
     }
-
+    /*Преобразование римского числа в аналогичное арабское*/
     public int letterToInt(char letter) {
         switch (letter) {
             case 'I': return 1;
